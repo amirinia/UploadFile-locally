@@ -20,7 +20,8 @@ namespace UploadFile.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        DbSet<FileModel> fileModels { set; get; }
+        DbSet<FileModel> FileModels { set; get; }
+        DbSet<DownloadFile> DownloadFiles { set; get; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -31,6 +32,5 @@ namespace UploadFile.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<UploadFile.Models.FileModel> FileModels { get; set; }
     }
 }

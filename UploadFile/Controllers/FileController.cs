@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace UploadFile.Controllers
 {
+    [Authorize]
     public class FileController : Controller
     {
         // GET: Home  
