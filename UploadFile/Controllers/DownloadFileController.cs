@@ -21,6 +21,9 @@ namespace UploadFile.Controllers
                 obj.File = fi.Name;
                 obj.Size = fi.Length;
                 obj.Type = GetFileTypeByExtension(fi.Extension);
+                obj.Url = string.Format(@HttpContext.Request.Url.Host +":"+ @HttpContext.Request.Url.Port + "/UploadedFiles/" + fi.Name);
+                          //@Url.Action("Information", "Admin");
+
                 ObjFiles.Add(obj);
             }
 

@@ -13,6 +13,7 @@ namespace UploadFile.Models
         public IEnumerable<HttpPostedFileBase> files { get; set; }
         public string File { get; set; }
         public long Size { get; set; }
+        public string Url { get; set; }
         public string Type { get; set; }
     }
 }
